@@ -6,7 +6,7 @@
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 11:31:00 by hurasmi           #+#    #+#             */
-/*   Updated: 2025/03/19 14:58:26 by hurasmi          ###   ########.fr       */
+/*   Updated: 2025/03/19 16:23:59 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,14 @@ int main()
 
     ft_printf("Server PID: %d\n", server_pid);
     
+    StructSignalHandler();
     
-    
+    ft_printf("Waiting message..\n");
 
-    
-    
-
-
+    while(1)
+    {
+        usleep(5000);
+    }
       
     
 

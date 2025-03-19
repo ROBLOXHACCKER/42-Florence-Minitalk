@@ -31,6 +31,7 @@ void sendBit(unsigned char sig)
     }
 }
 
+
 void sendToServer(unsigned char byte_to_send)
 {
     int max_bits = 7;
@@ -53,5 +54,4 @@ void sendMessage(char *message)
         message++;
     }
 }
-
 #endif
