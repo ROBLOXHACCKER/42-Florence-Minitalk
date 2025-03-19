@@ -6,7 +6,7 @@
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 11:31:00 by hurasmi           #+#    #+#             */
-/*   Updated: 2025/03/19 14:55:21 by hurasmi          ###   ########.fr       */
+/*   Updated: 2025/03/19 14:58:26 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int main()
     server_pid = getpid();
 
     ft_printf("Server PID: %d\n", server_pid);
+    
+    
     
 
     

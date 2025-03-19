@@ -20,15 +20,6 @@ unsigned char charToBit(char c)
     return bits;
 }
 
-void sendMessage(char *message)
-{
-    while(*message)
-    {
-        sendToServer(charToBit(*message));
-        message++;
-    }
-}
-
 void sendBit(unsigned char sig)
 {
     if(sig == 0)
@@ -53,4 +44,14 @@ void sendToServer(unsigned char byte_to_send)
         max_bits--;
     }
 }
+
+void sendMessage(char *message)
+{
+    while(*message)
+    {
+        sendToServer(charToBit(*message));
+        message++;
+    }
+}
+
 #endif
