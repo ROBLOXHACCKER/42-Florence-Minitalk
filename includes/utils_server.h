@@ -1,35 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   utils_server.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 11:31:00 by hurasmi           #+#    #+#             */
-/*   Updated: 2025/03/19 14:55:21 by hurasmi          ###   ########.fr       */
+/*   Created: 2025/03/19 14:54:46 by hurasmi           #+#    #+#             */
+/*   Updated: 2025/03/19 14:54:50 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/utils_server.h"
+#include "../includes/ft_printf/ft_printf.h"
+#include "../includes/libft/libft.h"
+#include <signal.h>
 
 
-
-int main()
-{
-    int server_pid;
-    
-    server_pid = getpid();
-
-    ft_printf("Server PID: %d\n", server_pid);
-    
-
-    
-    
-
-
-      
-    
-
-
-    return 0;
-}
