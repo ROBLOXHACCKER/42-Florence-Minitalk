@@ -6,7 +6,7 @@
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:10:29 by hurasmi           #+#    #+#             */
-/*   Updated: 2025/03/24 13:02:33 by hurasmi          ###   ########.fr       */
+/*   Updated: 2025/03/24 13:44:53 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	send_to_server(unsigned char byte_to_send)
 	while (max_bits >= 0)
 	{
 		bit = (byte_to_send >> max_bits) & 1;
-		sendBit(bit);
+		send_bit(bit);
 		usleep(100);
 		max_bits--;
 	}
@@ -68,11 +68,11 @@ void	send_message(char *message)
 	while (*message)
 	{
 		byte_to_send = *message;
-		sendToServer(byte_to_send);
+		send_to_server(byte_to_send);
 		message++;
 	}
 	byte_to_send = '\0';
-	sendToServer(byte_to_send);
+	send_to_server(byte_to_send);
 }
 
 #endif
