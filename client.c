@@ -6,7 +6,7 @@
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 11:28:42 by hurasmi           #+#    #+#             */
-/*   Updated: 2025/03/24 12:56:01 by hurasmi          ###   ########.fr       */
+/*   Updated: 2025/03/25 14:42:33 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(int argc, char *argv[])
 		return (-1);
 	}
 	g_server_pid = ft_atoi(argv[1]);
-	ft_printf("Client message: %s\n", argv[2]);
 	client_message = argv[2];
 	send_message(client_message);
 	return (0);

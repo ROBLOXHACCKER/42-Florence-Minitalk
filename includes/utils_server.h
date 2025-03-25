@@ -6,7 +6,7 @@
 /*   By: hurasmi <hurasmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 17:00:32 by pbrogi            #+#    #+#             */
-/*   Updated: 2025/03/24 13:42:13 by hurasmi          ###   ########.fr       */
+/*   Updated: 2025/03/25 14:53:29 by hurasmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,31 +32,24 @@ int	pow_two(int exponent)
 
 void	signal_handler(int sig)
 {
-	static int	i;
-	static int	ascii;
-	static char	message[1024];
-	static int	index;
+	static int		i = 0;
+	static int		ascii = 0;
+	static char		message[1024];
+	static int		index = 0;
 
-	i = 7;
-	index = 0;
-	ascii = 0;
-	if (sig == SIGUSR2)
-		ascii += pow_two(i);
-	if (i == 0)
+	ascii = (ascii << 1) | (sig == SIGUSR2);
+	i++;
+	if (i == 8)
 	{
-		message[index] = ascii;
-		index++;
-		if (ascii == 0)
+		message[index++] = ascii;
+		if (ascii == '\0')
 		{
-			message[index] = '\0';
 			ft_printf("%s\n", message);
 			index = 0;
 		}
-		i = 7;
+		i = 0;
 		ascii = 0;
 	}
-	else
-		i--;
 }
 
 #endif
